@@ -1,0 +1,16 @@
+<application>
+  <component name="MaterialDDLCThemeConfig">
+    <option name="pristineConfig" value="false" />
+    <option name="accentColor" value="ab47bc" />
+    <option name="selectedTheme" value="YURI" />
+    <option name="userId" value="184359c1:16a5b571b14:-8000" />
+    <option name="version" value="3.3.0" />
+  </component>
+  <component name="MaterialThemeConfig">
+    <option name="isContrastMode" value="true" />
+    <option name="isWizardShown" value="true" />
+    <option name="pristineConfig" value="false" />
+    <option name="userId" value="-3bfcfc50:169b563391f:-8000" />
+    <option name="version" value="3.10.0" />
+  </component>
+</application>

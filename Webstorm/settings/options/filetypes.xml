@@ -1,0 +1,10 @@
+<application>
+  <component name="FileTypeManager" version="17">
+    <extensionMap>
+      <mapping pattern="NumericInput.css" type="PLAIN_TEXT" />
+      <mapping pattern="Antd_collapse.re" type="PLAIN_TEXT" />
+      <mapping pattern="todo" type="PLAIN_TEXT" />
+      <mapping ext="lua" type="PLAIN_TEXT" />
+    </extensionMap>
+  </component>
+</application>
