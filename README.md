@@ -1,1 +1,4 @@
-# configs
+# My Configs:
+- Webstorm
+- OhMyZsh
+- Teamocil
