@@ -112,7 +112,9 @@ alias tmuxa='tmux  new-session -A'
 alias tmuxl='tmux list-sessions'
 
 # Git GOOD
+alias gc="git checkout"
 alias gcl="git clone"
+alias gpl="git pull"
 alias gp="git push"
 alias ga="git add -p"
 alias gip="git push --set-upstream origin"
