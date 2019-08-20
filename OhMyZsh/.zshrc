@@ -129,10 +129,12 @@ alias fetchDB="source ~/.fetchDB.sh"
 alias bootDraftbit="teamocil --here draftbit"
 
 #yarn stuff
-alias yr="yarn re:watch"
+alias y="yarn"
 alias ys="yarn start"
 alias yd="yarn dev"
 alias yr="yarn rollback"
+alias yrw="yarn re:watch"
+alias yrc="yarn re:clean"
 
 # Fast Node Manager https://github.com/Schniz/fnm
 eval `fnm env`
