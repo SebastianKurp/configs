@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/sebastian/.oh-my-zsh"
+export ZSH="/Users/sebastiankurpiel/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -102,13 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias run-emulator="/Users/sebastian/Library/Android/sdk/emulator/emulator -avd Nexus_5X"
-
- export ANDROID_HOME=~/Library/Android/sdk/
- export PATH=$PATH:~/android-sdks/platform-tools/
- export PATH=$PATH:~/android-sdks/tools/
- export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
-
 
 alias tma='tmux attach -t'
 alias tmd='tmux detach -a'
@@ -117,6 +110,29 @@ alias tml='tmux ls'
 alias tmn='tmux new-session -s'
 alias tmuxa='tmux  new-session -A'
 alias tmuxl='tmux list-sessions'
+
+# Git GOOD
+alias gcl="git clone"
+alias gp="git push"
+alias ga="git add -p"
+alias gip="git push --set-upstream origin"
+alias gcm="git commit -m"
+
+# NaVI
+alias home="cd ~"
+
+#iterm stuff
+alias c="clear"
+
+#draftbit
+alias fetchDB="source ~/.fetchDB.sh"
+alias bootDraftbit="teamocil --here draftbit"
+
+#yarn stuff
+alias yr="yarn re:watch"
+alias ys="yarn start"
+alias yd="yarn dev"
+alias yr="yarn rollback"
 
 # Fast Node Manager https://github.com/Schniz/fnm
 eval `fnm env`
