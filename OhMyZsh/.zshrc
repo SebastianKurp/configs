@@ -1,5 +1,4 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# If you come from bash you might have to change your $PATH.  # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/sebastiankurpiel/.oh-my-zsh"
@@ -103,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#TMUX
 alias tma='tmux attach -t'
 alias tmd='tmux detach -a'
 alias tmk='tmux kill-session -t'
@@ -110,6 +110,7 @@ alias tml='tmux ls'
 alias tmn='tmux new-session -s'
 alias tmuxa='tmux  new-session -A'
 alias tmuxl='tmux list-sessions'
+alias ks='tmux kill-session'
 
 # Git GOOD
 alias gc="git checkout"
@@ -117,18 +118,37 @@ alias gcl="git clone"
 alias gpl="git pull"
 alias gp="git push"
 alias ga="git add -p"
+alias gaa="git add ."
+alias gs="git stash"
 alias gip="git push --set-upstream origin"
 alias gcm="git commit -m"
+alias gst="git status"
+alias gmm="git merge origin master"
+alias gm="git merge"
+alias gcmb="gc master"
+alias gu="@SebastianKurp/"
+
+# LazyGit 
+alias lg="lazygit"
 
 # NaVI
 alias home="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias z="./z.sh"
+
+#exa 
+alias exat="exa --tree"
+alias exalh="exa --long --header"
 
 #iterm stuff
 alias c="clear"
+alias t="touch"
+alias v="nvim"
 
-#draftbit
-alias fetchDB="source ~/.fetchDB.sh"
-alias bootDraftbit="teamocil --here draftbit"
 
 #yarn stuff
 alias y="yarn"
@@ -137,6 +157,18 @@ alias yd="yarn dev"
 alias yr="yarn rollback"
 alias yrw="yarn re:watch"
 alias yrc="yarn re:clean"
+alias yys="yarn && yarn start"
+alias ya="yarn add"
+alias yad="yarn add --dev"
+alias ysto="yarn storybook"
+alias ybs="yarn build:styles"
+
+# hub
+eval "$(hub alias -s)"
+fpath=(~/.zsh/completions $fpath) 
+autoload -U compinit && compinit
+
+alias cpr="hub pull-request -m -0"
 
 # Fast Node Manager https://github.com/Schniz/fnm
 eval `fnm env`
@@ -144,3 +176,24 @@ export NODE_PATH=`which node`
 
 # Yarn
 export PATH="$PATH:`yarn global bin`"
+
+# Code
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+
+# pip
+alias pip=/usr/local/bin/pip3
+
+# ngrok
+alias ngrok="./ngrok"
+alias ngrokW="./ngrok http"
+
+# blitz
+alias blitz="yarn blitz"
+
+# sequelize
+alias sequelize="yarn sequelize"
+
+## i[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# iOS Sim
+alias openSim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
