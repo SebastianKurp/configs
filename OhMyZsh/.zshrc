@@ -1,8 +1,8 @@
-# If you come from bash you might have to change your $PATH.  # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+ ZSH_DISABLE_COMPFIX=true # If you come from bash you might have to change your $PATH.  # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/sebastiankurpiel/.oh-my-zsh"
-
+export AWS_SDK_LOAD_CONFIG=1
+export ZSH="/Users/skurpiel/.oh-my-zsh"
+export FURY_AUTH=DaQQM1HGvNJevks9eS2y
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -147,8 +147,6 @@ alias exalh="exa --long --header"
 #iterm stuff
 alias c="clear"
 alias t="touch"
-alias v="nvim"
-
 
 #yarn stuff
 alias y="yarn"
@@ -163,37 +161,61 @@ alias yad="yarn add --dev"
 alias ysto="yarn storybook"
 alias ybs="yarn build:styles"
 
-# hub
-eval "$(hub alias -s)"
-fpath=(~/.zsh/completions $fpath) 
-autoload -U compinit && compinit
+#node/npm stuff
+alias nv="node -v"
+alias ns="npm start"
+alias nd="npm dev"
+alias nid="npm install --save-dev"
+alias nns="npm && npm start"
+alias ni="npm install"
+alias nrs="npm run storybook"
 
-alias cpr="hub pull-request -m -0"
+### Docker 
+alias docker-stop-all='docker stop $(docker ps -a -q)'
+alias docker-kill-all='docker rm $(docker ps -a -q)'
+alias docker-prune='docker system prune -a'
+alias docker-nuke='docker-stop-all && docker-kill-all && docker-prune'
+
+# Vim 
+alias v="vim"
 
 # Fast Node Manager https://github.com/Schniz/fnm
 eval `fnm env`
 export NODE_PATH=`which node`
 
-# Yarn
-export PATH="$PATH:`yarn global bin`"
-
 # Code
-alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+code () { VSCODE_CWD=”$PWD” open -n -b “com.microsoft.VSCode” — args $* ;}
 
 # pip
 alias pip=/usr/local/bin/pip3
 
-# ngrok
-alias ngrok="./ngrok"
-alias ngrokW="./ngrok http"
-
-# blitz
-alias blitz="yarn blitz"
-
-# sequelize
-alias sequelize="yarn sequelize"
-
-## i[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # iOS Sim
 alias openSim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+
+#Disk Usage
+alias du="duf --hide-network"
+
+#DynamoDB-admin
+# alias dynamoAdmin = DYNAMO_ENDPOINT=http://localhost:4000 dynamodb-admin --open
+
+#DynamoDB Serverless install
+# alias dynamoi = npm run serverless -- dynamodb install
+
+# Global Shortcut
+alias reload-profile="source ~/.zshrc"
+alias edit-profile="sudo vim ~/.zshrc"
+ 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+ eval "$(pyenv init -)"
+fi
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+export PIPENV_VENV_IN_PROJECT="1"
