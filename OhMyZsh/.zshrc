@@ -2,7 +2,6 @@
 # Path to your oh-my-zsh installation.
 export AWS_SDK_LOAD_CONFIG=1
 export ZSH="/Users/skurpiel/.oh-my-zsh"
-export FURY_AUTH=DaQQM1HGvNJevks9eS2y
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
