@@ -203,6 +203,9 @@ alias du="duf --hide-network"
 #DynamoDB Serverless install
 # alias dynamoi = npm run serverless -- dynamodb install
 
+#Truncate Dynamo table, needs https://github.com/jenslauterbach/ddbt
+alias truncateTable = ddbt
+
 # Global Shortcut
 alias reload-profile="source ~/.zshrc"
 alias edit-profile="sudo vim ~/.zshrc"
